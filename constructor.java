@@ -72,14 +72,47 @@ public static void main(String[] args) {
 
     //arrays of objects
 
-    foods food1=new foods("bread");
-    foods food2=new foods("zam");
+    insidefridge food1=new insidefridge("bread");
+    insidefridge food2=new insidefridge("zam");
 
-    foods[] fridge={food1,food2};
+    insidefridge[] fridge={food1,food2};
 
     System.out.println(fridge[0].name);
     System.out.println(fridge[1].name);
 
+    // objects passing
+
+    garage garage=new garage();
+    carname carname=new carname("BMW");
+    carname carname2=new carname("BENZ");
+    garage.parking(carname);
+    garage.parking(carname2);
+
+    //static keyword
+    // static = variable / method is created or shared and class "owns" the static member
+
+    Friend friend=new Friend("kiran");
+    Friend friend1=new Friend("kkk");
+
+
+    System.out.println(Friend.numberoffriends);
+
+    Friend.displaynoofriends();
+
+    //java inheritance extends
+    // in cars class vehicles extended = inherited
+    // in bycycle class vehicles extended = inherited
+
+    vehicle vehicle=new vehicle();
+    vehicle.go();
+    vehicle.stop();
+    System.out.println(vehicle.speed);
+
+    cars cars=new cars();
+    cars.go();
+
+    bycycle bycycle=new bycycle();
+    bycycle.stop();
 
 
 
