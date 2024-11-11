@@ -1,6 +1,6 @@
-public class Food {
+public class insidefridge {
     String name;
-    Food(String name){
+    insidefridge(String name){
         this.name=name;
     }
 }
