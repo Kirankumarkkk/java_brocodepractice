@@ -43,3 +43,92 @@ public class abstractionclasscar extends abstractionclassvehicle{
 }
 
 //************************************************************************************
+
+java abstraction
+
+java access modifier (public,protected,private)
+
+//java access modifier (public,protected,private)
+
+//creating 2 packages and create 2 class in each packages
+
+//no modifier eg defaultMessage String variable if we try to access from another class it won't work
+// it can be accessible in the same packages , if we tried to access from it will not show the variables
+
+// if String stringname="variable" this can be accessible only in the same package
+// if public String stringname="variable" this can be accessible from another class/another packages as well.
+
+//*******************************************
+public: visible in all classes in all packages
+protected: visible to all classes in the same package or classes in other packages that are a subclass
+default: visible to all classes in the same package
+private: visible only in the same class
+//*******************************************
+
+// create 2 packages , in package 1 classA and classB , in package 2 classC and classAsub
+
+//*********************************************
+// classA
+
+package accessmodifierpackage1;
+import accessmodifierpackage2.*;
+
+public class classA {
+
+    protected String protectedMessage="protected Message";
+
+    public static void main(String[] args) {
+
+        classC classC=new classC();
+        System.out.println(classC.publicMessage);
+        System.out.println(classC.package2message);
+
+        classB classb=new classB();
+        //System.out.println(classb.privateMessage);
+        //since above message is private it's only accessiable from the same class
+        System.out.println(classb.defaultmessage1);
+
+    }
+}
+
+//** classB
+
+package accessmodifierpackage1;
+import accessmodifierpackage2.*;
+
+public class classB {
+    private String privateMessage="This is private Message";
+    String defaultmessage1="this message from classB";
+}
+
+//** classC
+
+package accessmodifierpackage2;
+import accessmodifierpackage1.*;
+
+public class classC {
+    public String publicMessage="this is public message";
+    String defaultMessage="hello default message from classC package 2";
+    public String package2message="package2 message";
+
+}
+
+//** classAsub
+
+package accessmodifierpackage2;
+import accessmodifierpackage1.*;
+
+public class classAsub extends classA {
+
+    public static void main(String[] args) {
+
+        classC classC=new classC();
+        System.out.println(classC.defaultMessage);
+
+        classAsub classasub=new classAsub();
+
+        System.out.println(classasub.protectedMessage);
+    }
+}
+
+//********************************************************************
