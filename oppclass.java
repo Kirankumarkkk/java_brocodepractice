@@ -21,6 +21,15 @@ public class oppclass {
 
         System.out.println("hello oppclass");
 
+        newgarage newgarage1=new newgarage();
+
+        newcars newcarename=new newcars("Audi");
+
+        newgarage1.carnamemethod(newcarename);
+
+
+
+
     }
 }
 
