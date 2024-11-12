@@ -44,10 +44,6 @@ public class abstractionclasscar extends abstractionclassvehicle{
 
 //************************************************************************************
 
-java abstraction
-
-java access modifier (public,protected,private)
-
 //java access modifier (public,protected,private)
 
 //creating 2 packages and create 2 class in each packages
@@ -132,3 +128,56 @@ public class classAsub extends classA {
 }
 
 //********************************************************************
+
+//********java encapsulation
+
+//encapsulation - when variables are set to private in the class, using get method and set method , we can access private variables
+
+//*************encapsulationMainclass
+
+package encapsulationpackage;
+
+public class encapsulationMainclass {
+    public static void main(String[] args) {
+
+        encapsulationCarclass encapsulationcar=new encapsulationCarclass("BMW",2024);
+        System.out.println(encapsulationcar.getName());
+        System.out.println(encapsulationcar.getYear());
+
+        encapsulationcar.setName("Audi");
+        System.out.println(encapsulationcar.getName());
+
+        encapsulationcar.setYear(2025);
+        System.out.println(encapsulationcar.getYear());
+
+    }
+}
+
+//********encapsulationCarclass
+
+package encapsulationpackage;
+
+public class encapsulationCarclass {
+    private String name;
+    private int year;
+    encapsulationCarclass(String name,int year){
+        this.setName(name);
+        this.setYear(year);
+    }
+    public String getName(){
+        return name;
+    }
+    public int getYear(){
+        return year;
+    }
+
+    public void setName(String name){
+        this.name=name;
+    }
+
+    public void setYear(int year){
+        this.year=year;
+    }
+}
+
+//**
