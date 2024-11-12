@@ -131,7 +131,8 @@ public class classAsub extends classA {
 
 //********java encapsulation
 
-//encapsulation - when variables are set to private in the class, using get method and set method , we can access private variables
+//encapsulation - when variables are set to private in the class,
+ // can be acessiable , only using getter method and setter method , we can access private variables
 
 //*************encapsulationMainclass
 
@@ -180,4 +181,74 @@ public class encapsulationCarclass {
     }
 }
 
+//** java copy objects
+// create new object and in constructor add one more constructor for copy and add copy method
+
+// **encapsulationmainclass
+
+package encapsulationpackage;
+
+public class encapsulationMainclass {
+    public static void main(String[] args) {
+
+        encapsulationCarclass encapsulationcar=new encapsulationCarclass("BMW",2024);
+        System.out.println(encapsulationcar.getName());
+        System.out.println(encapsulationcar.getYear());
+
+        encapsulationcar.setName("Audi");
+        System.out.println(encapsulationcar.getName());
+
+        encapsulationcar.setYear(2025);
+        System.out.println(encapsulationcar.getYear());
+
+        encapsulationCarclass encapsulationcar1=new encapsulationCarclass("FORD",2024);
+        encapsulationCarclass encapsulationcar2=new encapsulationCarclass(encapsulationcar1);
+
+        System.out.println(encapsulationcar1);
+        System.out.println(encapsulationcar2);
+        System.out.println();
+        System.out.println(encapsulationcar1.getName());
+        System.out.println(encapsulationcar1.getYear());
+        System.out.println();
+        System.out.println(encapsulationcar2.getName());
+        System.out.println(encapsulationcar2.getYear());
+
+    }
+}
+
+//** encapsultioncarclass
+package encapsulationpackage;
+
+public class encapsulationCarclass {
+    private String name;
+    private int year;
+    encapsulationCarclass(String name,int year){
+        this.setName(name);
+        this.setYear(year);
+    }
+    encapsulationCarclass(encapsulationCarclass x){
+        this.copy(x);
+    }
+    public String getName(){
+        return name;
+    }
+    public int getYear(){
+        return year;
+    }
+
+    public void setName(String name){
+        this.name=name;
+    }
+
+    public void setYear(int year){
+        this.year=year;
+    }
+
+    public void copy(encapsulationCarclass x){
+        this.setName(x.getName());
+        this.setYear(x.getYear());
+    }
+}
+
 //**
+

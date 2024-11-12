@@ -7,6 +7,9 @@ public class encapsulationCarclass {
         this.setName(name);
         this.setYear(year);
     }
+    encapsulationCarclass(encapsulationCarclass x){
+        this.copy(x);
+    }
     public String getName(){
         return name;
     }
@@ -20,5 +23,10 @@ public class encapsulationCarclass {
 
     public void setYear(int year){
         this.year=year;
+    }
+
+    public void copy(encapsulationCarclass x){
+        this.setName(x.getName());
+        this.setYear(x.getYear());
     }
 }
