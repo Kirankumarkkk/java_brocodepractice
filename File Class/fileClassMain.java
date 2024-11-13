@@ -1,6 +1,8 @@
 package FileClass;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class fileClassMain {
 
@@ -8,6 +10,7 @@ public class fileClassMain {
 
         File file1=new File("C:\\Users\\a921731\\Desktop\\JAVA files\\firstProject\\src\\A_brocode_practice code and comments.txt");
 
+        // checking for file path and exists
         if(file1.exists()){
 
             System.out.println("File present");
@@ -20,6 +23,20 @@ public class fileClassMain {
         else {
             System.out.println("File doesn't exist");
         }
+
+        // create new file with txt format
+
+        try{
+            FileWriter writer1=new FileWriter("poem.txt");
+            writer1.write("Roses are red\nviolets are blue");
+            writer1.append("\nThis is the end");
+            writer1.close();
+
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+
     }
 
 }
