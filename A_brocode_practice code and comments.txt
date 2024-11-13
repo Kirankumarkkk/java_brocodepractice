@@ -250,5 +250,59 @@ public class encapsulationCarclass {
     }
 }
 
-//**
+//**java interface - template for methods/action using implements interfacename1,interfacename2
+// we can use interface and override the method in class of implements
+// in the interface class only void methodname(); only present
+
+//*interfacemain class
+
+package javainterface;
+
+public class interfacemain {
+
+    public static void main(String[] args) {
+
+        rabbit rabbit1=new rabbit();
+        rabbit1.notcruel();
+        rabbit1.cruel();
+    }
+}
+
+//* prey
+
+package javainterface;
+
+public interface prey {
+
+    void notcruel();
+}
+
+// predator
+
+package javainterface;
+
+public interface predator {
+
+    void cruel();
+}
+
+// rabbit
+
+package javainterface;
+
+public class rabbit implements prey,predator {
+
+    public void notcruel(){
+        System.out.println("Rabbit is not cruel");
+    }
+
+    public void cruel(){
+        System.out.println("Hawk is cruel");
+    }
+
+
+}
+
+
+
 
