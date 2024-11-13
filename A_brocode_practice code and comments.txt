@@ -457,7 +457,111 @@ public class exceptionHandlingMain {
     }
 }
 
+//***** java File class to check file present or not, get path and delete
+// filename.txt with extension also can give and make sure file present in the project if we are giving file name
 
+//* fileClassMain
 
+package FileClass;
 
+import java.io.File;
 
+public class fileClassMain {
+
+    public static void main(String[] args) {
+
+        File file1=new File("C:\\Users\\a921731\\Desktop\\JAVA files\\firstProject\\src\\A_brocode_practice code and comments.txt");
+
+        if(file1.exists()){
+
+            System.out.println("File present");
+            System.out.println(file1.getPath());
+            System.out.println(file1.getAbsolutePath());
+            System.out.println(file1.isFile());
+            //file1.delete();
+            //above code will delete the file
+        }
+        else {
+            System.out.println("File doesn't exist");
+        }
+    }
+
+}
+
+//* FileWriter write - create new file and text in the file
+
+// ** fileClassMain look for writer
+
+package FileClass;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class fileClassMain {
+
+    public static void main(String[] args) {
+
+        File file1=new File("C:\\Users\\a921731\\Desktop\\JAVA files\\firstProject\\src\\A_brocode_practice code and comments.txt");
+
+        if(file1.exists()){
+
+            System.out.println("File present");
+            System.out.println(file1.getPath());
+            System.out.println(file1.getAbsolutePath());
+            System.out.println(file1.isFile());
+            //file1.delete();
+            //above code will delete the file
+        }
+        else {
+            System.out.println("File doesn't exist");
+        }
+
+        try{
+            FileWriter writer1=new FileWriter("poem.txt");
+            writer1.write("Roses are red\nviolets are blue");
+            writer1.append("\nThis is the end");
+            writer1.close();
+
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+
+    }
+
+}
+
+//* File Reader
+
+	// FileReader = read the contents of a file as a stream of characters. One by one
+		//				read() returns an int value which contains the byte value
+		//				when read() returns -1, there is no more data to be read
+
+package FileClass;
+import java.io.FileReader;
+import java.io.*;
+
+public class FileReaderMain {
+    public static void main(String[] args) {
+        try {
+            FileReader reader = new FileReader("art.txt");
+            int data = reader.read();
+            while(data != -1) {
+                System.out.print((char)data);
+                data = reader.read();
+            }
+            reader.close();
+
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+    }
+}
+
+// **
