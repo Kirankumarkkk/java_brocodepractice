@@ -304,5 +304,160 @@ public class rabbit implements prey,predator {
 }
 
 
+//** java polymorphism - poly-many morph -form , ability of object to identify as more than one type
+
+//* 2 class extends vehicle and new 2 objects as object stored and using for loop
+
+//*polymorphismmain
+
+package polymorphismjava;
+
+public class polymorphismmain {
+
+    public static void main(String[] args) {
+
+        polymorphismcar car1=new polymorphismcar();
+        polymorphismbycyle bycycle1=new polymorphismbycyle();
+
+        polymorphismvehicle[] vehicle1={car1,bycycle1};
+
+        for (polymorphismvehicle x : vehicle1){
+            x.go();
+        }
+    }
+}
+
+//polymorphismvehicle
+
+package polymorphismjava;
+
+public class polymorphismvehicle {
+
+    public void go(){
+    }
+}
+
+//polymorphismcar
+
+package polymorphismjava;
+
+public class polymorphismcar extends polymorphismvehicle{
+
+    public void go(){
+        System.out.println("car is moving");
+    }
+}
+
+//polymorphismbycyle
+
+package polymorphismjava;
+
+  public class polymorphismbycyle extends  polymorphismvehicle{
+      public void go(){
+          System.out.println("Bycycle is moving");
+      }
+  }
+
+//** dynamic polymorphism - dynamic- after compilation - during runtime
+// 1= cat , 2=dog , animal eg
+
+
+package polymorphismjava;
+
+import java.util.Scanner;
+
+public class dynamicpolymorphismMain {
+    public static void main(String[] args) {
+        Scanner scanner1=new Scanner(System.in);
+        dynamicpolymorphismAnimal Animal;
+
+        System.out.println("what animal do you want?");
+        System.out.println("1=cat and 2=dog");
+        int choice=scanner1.nextInt();
+
+        if (choice==1){
+            Animal= new dynamicpolymorphismCat();
+            Animal.speak();
+        } else if (choice==2) {
+            Animal=new dynamicpolymorphismDog();
+            Animal.speak();
+
+        }
+        else {
+            Animal=new dynamicpolymorphismAnimal();
+            Animal.speak();
+        }
+
+
+    }
+}
+
+//* dynamicpolymorphismAnimal
+
+package polymorphismjava;
+
+public class dynamicpolymorphismAnimal {
+
+    public void speak(){
+        System.out.println("Enter value is invalid");
+    }
+}
+
+//* polymorphismjava
+
+package polymorphismjava;
+
+public class dynamicpolymorphismCat extends dynamicpolymorphismAnimal{
+
+    public void speak(){
+        System.out.println("Cat says MEOW MEOW");
+    }
+
+}
+
+//* dynamicpolymorphismDog
+
+package polymorphismjava;
+
+public class dynamicpolymorphismDog extends dynamicpolymorphismAnimal {
+
+    public void speak(){
+        System.out.println("Dog Barks Barks BOW BOW");
+    }
+}
+
+//*************** Exception handling if we expect error use try{} catch(error e) finally{}
+
+//* exceptionHandlingMain
+
+package exceptionHandling;
+
+import java.util.Scanner;
+
+public class exceptionHandlingMain {
+    public static void main(String[] args) {
+        Scanner scanner1=new Scanner(System.in);
+
+        try {
+            System.out.println("Enter a number to divide: ");
+            int x = scanner1.nextInt();
+            System.out.println("Enter a number to divide by: ");
+            int y = scanner1.nextInt();
+            int z = x / y;
+            System.out.println("z value is " + z);
+        }
+        catch(Exception e){
+            System.out.println("We can divide by zero");
+        }
+
+        finally {
+            scanner1.close();
+            System.out.println("this will print always");
+        }
+    }
+}
+
+
+
 
 
