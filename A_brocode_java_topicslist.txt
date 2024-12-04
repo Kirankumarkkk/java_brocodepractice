@@ -40,5 +40,6 @@ java file class
 java GUI class
 java method chaining #string name.concat().upperCase().trim()
 java enum   #enum EARTH(10)
+java HashMap  #HashMap<String,Integer,Double> countries.put or .remove .close .size key value pair
 
  
