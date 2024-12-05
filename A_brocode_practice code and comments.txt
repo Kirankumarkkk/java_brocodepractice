@@ -1431,7 +1431,7 @@ public class lambdaMain {
 // a benefit is to eliminate the need to create multiple versions of method or classes for various data types
 // create 1 version of method to handle all referencedatatypes
 
-//*java generic main
+//*java generic method below class
 
 
 public class genericsMain {
@@ -1463,6 +1463,42 @@ public class genericsMain {
 
     public static<Thing> Thing getFirstArry(Thing[] array){
         return array[0];
+    }
+}
+
+//----------
+
+//* java generic class below classes
+
+//*generic class
+package Generics;
+
+public class myGenericsclass<Thing> {
+    Thing x;
+    myGenericsclass(Thing x){
+    this.x=x;
+    }
+    public Thing getValue(){
+        return x;
+    }
+}
+
+//*main class
+
+package Generics;
+
+public class genericsMain {
+    public static void main(String[] args) {
+        myGenericsclass mygenericclassString= new myGenericsclass("String");
+        myGenericsclass mygenericclassInteger= new myGenericsclass(1);
+        myGenericsclass mygenericclassDouble= new myGenericsclass(5.5);
+        myGenericsclass mygenericclassChar= new myGenericsclass('$');
+
+        System.out.println(mygenericclassString.getValue());
+        System.out.println(mygenericclassInteger.getValue());
+        System.out.println(mygenericclassDouble.getValue());
+        System.out.println(mygenericclassChar.getValue());
+
     }
 }
 
