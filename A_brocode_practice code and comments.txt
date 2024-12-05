@@ -1272,6 +1272,198 @@ public class AgeException extends Exception{
 }
 
 //-----------------------------------------------------------------------------------------
+//* Java anonymous objects
+
+import java.awt.*;
+import java.util.*;
+import javax.swing.*;
+
+public class anonymousObjectmain {
+
+    public static void main(String[] args) {
+
+        JFrame frame = new JFrame();
+        ArrayList<JLabel> deck = new ArrayList<JLabel>();
+
+		/*
+		ImageIcon AC = new ImageIcon("src\\cards\\1.png");
+		JLabel AClabel = new JLabel(AC);
+		deck.add(AClabel);
+
+		ImageIcon TwoC = new ImageIcon("src\\cards\\2.png");
+		JLabel TwoClabel = new JLabel(TwoC);
+		deck.add(TwoClabel);
+
+		... repeat for all 52 cards :(
+		*/
+
+        for(int i =1;i<=52;i++) {
+            deck.add(new JLabel(new ImageIcon("src\\cards\\"+i+".png")));
+            frame.add(deck.get(i-1));
+        }
+
+        //frame.add(deck.get(0));
+        //frame.add(deck.get(1));
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(420, 420);
+        frame.setLayout(new FlowLayout());
+        frame.setVisible(true);
+    }
+}
+
+//-------------------------------------------------------------------------------
+// inner class -a class inside of another class helps group classes that belong together , extremely useful for listeners for specific events
+//*Java inner classes class inside a class
+
+//main class
+
+public class InnerClassmain {
+    public static void main(String[] args) {
+
+        outSideclass out=new outSideclass();
+        outSideclass.inSideclass in=out.new inSideclass();
+        in.greetings();
+    }
+}
+
+//outSide and inside class
+
+public class outSideclass {
+    String x="Hello ";
+
+    public class inSideclass{
+        String y="World !";
+        public void greetings(){
+            System.out.println(x+y);
+        }
+    }
+
+
+}
+
+//--------------------------------------------------------------------------------
+
+//* java inner anonymous inner class
+//* main class class another class and overrides the methods
+
+public class InnerClassmain {
+    public static void main(String[] args) {
+
+        //outSideclass and inSideclass both classes
+        outSideclass out=new outSideclass();
+        outSideclass.inSideclass in=out.new inSideclass();
+        in.greetings();
+
+        //innerclassGreeting override 1
+
+        innerclassGreeting innerclassGreeting1=new innerclassGreeting(){
+            @Override
+            public void greetings() {
+                System.out.println("yo bro");
+            }
+        };
+
+        innerclassGreeting1.greetings();
+
+        //innerclassGreeting override 2
+
+        innerclassGreeting innerclassGreeting2=new innerclassGreeting(){
+            @Override
+            public void greetings() {
+                System.out.println("yo hello");
+            }
+        };
+
+        innerclassGreeting2.greetings();
+
+    }
+}
+
+//* innerclassGreeting class method class
+
+public class innerclassGreeting {
+    public void greetings(){
+        System.out.println("Hello greetings");
+    }
+}
+
+//*----------------------------------------------------------------------------------------
+//* lambda #interface and pass parameter through lambda exp (x,y) -> { sout(x+y) }
+//*lambda a shorter way to write anonymous classes  and a lambda expression can be used in any place where a functional interface is required
+//*lambda expression: (arguments) -> {statement/s}
+
+//myinterface interface
+
+package lambdapackage;
+@FunctionalInterface
+
+public interface myinterface {
+    public void message(String name,char symbol,String name1);
+
+}
+
+//lamda main java
+
+package lambdapackage;
+
+public class lambdaMain {
+    public static void main(String[] args) {
+
+        String name="bro";
+        char symbol='!';
+        String name1="again";
+
+        myinterface myinterface1=(x,y,z) -> {
+            System.out.println("hey "+x+y+z);
+        };
+
+        myinterface myinterface2=(x,y,z) -> System.out.println("hey dude "+x+y+z);
+
+        myinterface1.message(name,symbol,name1);
+        myinterface2.message(name,symbol,name1);
+
+    }
+}
+
+//------------------------------------------------------------------------------
+
+// java generics = enable types (classes and interfaces) to be parmeters when defining : classes, interfaces and methods
+// a benefit is to eliminate the need to create multiple versions of method or classes for various data types
+// create 1 version of method to handle all referencedatatypes
+
+//*java generic main
+
+
+public class genericsMain {
+    public static void main(String[] args) {
+
+        Integer[] intArray={1,2,3,4};
+        Double[] doubleArray={1.1,2.2,3.3,4.4};
+        String[] strArray={"A","B","C","D"};
+        Character[] charArry={'!','@','$','&'};
+        displayArray(intArray);
+        displayArray(doubleArray);
+        displayArray(strArray);
+        displayArray(charArry);
+        System.out.println(getFirstArry(strArray));
+        System.out.println(getFirstArry(charArry));
+
+
+    }
+    //method to display array for all data types
+    public static<Thing> void displayArray(Thing[] arrayeach) {
+        for (Thing x : arrayeach) {
+            System.out.print(x + " ");
+        }
+        System.out.println();
+
+    }
+
+    //method to return array[0] first value for all data types
+
+    public static<Thing> Thing getFirstArry(Thing[] array){
+        return array[0];
+    }
+}
+
 //*
-
-
