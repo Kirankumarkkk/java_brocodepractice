@@ -41,5 +41,5 @@ java GUI class
 java method chaining #string name.concat().upperCase().trim()
 java enum   #enum EARTH(10)
 java HashMap  #HashMap<String,Integer,Double> countries.put or .remove .close .size key value pair
-
+java custom exceptions / user defined exceptions  # extends Exception , Exception e , super(m)
  
