@@ -1549,4 +1549,108 @@ public class genericsMain {
 }
 
 //*------------------------------------------------------------------------------
-//
+// * java Serialization
+
+//Java serialization = serialVersionUID is a unique ID that functions like a version
+
+//Serialization = the process of converting an object into a byt stream. Persists (saves the state) the object after program exits this byte stream can be saved as a file or sent over a network can be sent to a different machine
+//Byte stream can be saved as a file (.ser) which is platform independent (think of this as if you're saving a file with the object's information)
+
+
+//deserialization = the reverse process of converting a byte stream i
+
+//Steps to serialize
+//1. your object class should implement serializable interface
+//2. add import java.io.Serializable;
+//3. FileOutputStream fileOut= new FileOutputStream(file path or  "userinfo.ser")
+//4. ObjectOutputStream out=new ObjectOutputStream(fileOut);
+//5. out.writeObject(objectName)
+//6. out.close(); fileOut.close();
+
+//Steps to Deserialize
+//1.Declare your object ( don't instantiate)
+//2.your class should implement serializable interface
+//3.add import java.io.Serializable;
+//4.FileInputStream fileIn=new FileInputStream(file path);
+//5.ObjectInputStream in=new ObjectInputStream(fileIn);
+//6.objectName=(Class) in.readObject();
+//7.in.close(); fileIn.close();
+
+//*--- serialization user class program
+package Serialization;
+
+import java.io.Serializable;
+
+public class users implements Serializable {
+    String name;
+    String password;
+
+    public void sayHello(){
+        System.out.println("Hey "+ name+" "+ password );
+    }
+}
+
+//*serialization main class
+
+package Serialization;
+import java.io.*;
+
+public class serializationMain {
+    public static void main(String[] args) throws IOException {
+
+        users user=new users();
+        user.name="kiran";
+        user.password="1234";
+
+        //user1.sayHello();
+
+        FileOutputStream fileOut= new FileOutputStream("C:\\Users\\a921731\\Desktop\\JAVA files\\firstProject\\userinfo.ser");
+        ObjectOutputStream out=new ObjectOutputStream(fileOut);
+        out.writeObject(user);
+        out.close();
+        fileOut.close();
+
+        System.out.println("Object saved!");
+
+    }
+}
+//* Deserialization class users
+
+package DeSerialization;
+
+import java.io.Serializable;
+
+public class users implements Serializable {
+    String name;
+    String password;
+
+    public void sayHello(){
+        System.out.println("Hey "+ name+" "+ password );
+    }
+}
+
+// Deserialization main class
+
+package DeSerialization;
+import java.io.*;
+import Serialization.users;
+
+public class DeSerializationMain {
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
+
+        users user=null;
+        FileInputStream fileIn=new FileInputStream("C:\\Users\\a921731\\Desktop\\JAVA files\\firstProject\\src\\DeSerialization\\userinfo.ser");
+        ObjectInputStream in=new ObjectInputStream(fileIn);
+        //objectName=(Class) in.readObject();
+        user = (users) in.readObject();
+        in.close();
+        fileIn.close();
+
+        System.out.println(user.name);
+        System.out.println(user.password);
+        user.sayHello();
+
+    }
+}
+
+//*
