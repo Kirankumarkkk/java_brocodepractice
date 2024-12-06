@@ -1489,10 +1489,10 @@ package Generics;
 
 public class genericsMain {
     public static void main(String[] args) {
-        myGenericsclass mygenericclassString= new myGenericsclass("String");
-        myGenericsclass mygenericclassInteger= new myGenericsclass(1);
-        myGenericsclass mygenericclassDouble= new myGenericsclass(5.5);
-        myGenericsclass mygenericclassChar= new myGenericsclass('$');
+        myGenericsclass<String> mygenericclassString= new myGenericsclass<>("String");
+        myGenericsclass<Integer> mygenericclassInteger= new myGenericsclass<>(1);
+        myGenericsclass<Double> mygenericclassDouble= new myGenericsclass<>(5.5);
+        myGenericsclass<Character> mygenericclassChar= new myGenericsclass<>('$');
 
         System.out.println(mygenericclassString.getValue());
         System.out.println(mygenericclassInteger.getValue());
@@ -1501,5 +1501,52 @@ public class genericsMain {
 
     }
 }
+//*-----------------------------------------------------
+//* java generics with array and hashmap below 2 classes
+// bounded types = you can create the objects of a generic class to have data of specific derived types ex.Number
+//* my genericsclass below
 
-//*
+package Generics;
+
+public class myGenericsclass<Thing, Thing2> {
+    Thing x;
+    Thing2 y;
+    myGenericsclass(Thing x, Thing2 y){
+    this.x=x;
+    this.y=y;
+    }
+    public Thing2 getValue(){
+        return y;
+    }
+}
+
+//*genericsmain class
+
+
+package Generics;
+
+import java.util.ArrayList;
+
+public class genericsMain {
+    public static void main(String[] args) {
+        myGenericsclass<String,Character> mygenericclassString= new myGenericsclass<>("String",'$');
+        myGenericsclass<Integer,Integer> mygenericclassInteger= new myGenericsclass<>(1,2);
+        myGenericsclass<Double,Double> mygenericclassDouble= new myGenericsclass<>(5.5,3.3);
+        myGenericsclass<Character,Character> mygenericclassChar= new myGenericsclass<>('$','@');
+
+        System.out.println(mygenericclassString.getValue());
+        System.out.println(mygenericclassInteger.getValue());
+        System.out.println(mygenericclassDouble.getValue());
+        System.out.println(mygenericclassChar.getValue());
+
+        ArrayList<String> myfriends= new ArrayList<>();
+        myfriends.add("Kiran");
+        myfriends.add("Kumar");
+        System.out.println(myfriends);
+        System.out.println(myfriends.getFirst());
+
+    }
+}
+
+//*------------------------------------------------------------------------------
+//
