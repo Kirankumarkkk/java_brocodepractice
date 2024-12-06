@@ -1,11 +1,13 @@
 package Generics;
 
-public class myGenericsclass<Thing> {
+public class myGenericsclass<Thing, Thing2> {
     Thing x;
-    myGenericsclass(Thing x){
+    Thing2 y;
+    myGenericsclass(Thing x, Thing2 y){
     this.x=x;
+    this.y=y;
     }
-    public Thing getValue(){
-        return x;
+    public Thing2 getValue(){
+        return y;
     }
 }
