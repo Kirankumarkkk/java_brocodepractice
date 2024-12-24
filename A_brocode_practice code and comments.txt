@@ -1857,3 +1857,149 @@ public class timerTaskmain {
 }
 
 //*------------------------------------------------------------------
+//* java threads  main java
+
+// threads runs main and isdeamon true or false
+
+package javathreads;
+
+//java virtual machine continues to execute threads until either of 1. the exit method of class runtime has been called  , 2 . all user threads have died
+
+public class javathreadsmain {
+    public static void main(String[] args) throws InterruptedException {
+        //System.out.println("hey thread");
+        Thread.currentThread().setName("javathreadsmain");
+        System.out.println(Thread.activeCount());
+        System.out.println(Thread.currentThread().getName());
+        Thread.currentThread().setPriority(10);
+        System.out.println(Thread.currentThread().getPriority());
+        boolean alive = Thread.currentThread().isAlive();
+        System.out.println(alive);
+        for(int i=3;i>0;i--){
+            System.out.println(i);
+            Thread.sleep(1000);
+        }
+
+        System.out.println("thread is done");
+
+        mythread thread1= new mythread();
+
+        thread1.setDaemon(true);   //false for undo Daemon
+        System.out.println(thread1.isDaemon());
+
+        System.out.println(thread1.currentThread().getName());
+        thread1.start();
+
+        //System.out.println(thread1.currentThread().isAlive());
+        //System.out.println(thread1.activeCount());
+
+
+
+
+
+    }
+}
+
+// mythread java program
+
+
+package javathreads;
+
+public class mythread extends Thread{
+
+    @Override
+    public void run(){
+        if(this.isDaemon()) {
+            System.out.println("this isDaemon thread ");
+        }
+        else {
+            System.out.println("this user thread");
+        }
+    }
+}
+
+//------------------------------------------------------------------------------------
+
+//* multi threading main java
+
+//multithreading - process of executing multiple threads simultaneously helps maximum utilization of cpu
+
+// threads are independent, they don't affect the execution of other threads
+
+//an execution in one thread doesn't affect the execution of other threads
+
+//mymultithreading main
+
+package javathreads;
+
+public class mymultithreadingmain {
+    public static void main(String[] args) throws InterruptedException {
+
+    mymultithread thread1=new mymultithread();
+   //thread1.run();
+
+        //or
+
+        myrunnable runnable1= new myrunnable();
+        Thread thread2=new Thread(runnable1);
+        //thread2.run();
+        //thread1.setDaemon(true); //set Daemon true
+        //thread2.setDaemon(true);
+
+        thread1.start();
+        thread1.join(2000);   //running thread 1 start then thread 2
+        thread2.start();
+
+
+
+    }
+}
+
+//mymultithread
+
+package javathreads;
+
+public class mymultithread extends Thread{
+
+    @Override
+
+    public void run(){
+
+        for(int i=10;i>0;i--){
+            System.out.println("count down "+i);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        System.out.println("mymultithread #1 is done");
+    }
+}
+
+//myrunnable implements Runnable
+
+package javathreads;
+
+public class myrunnable implements Runnable{
+
+    @Override
+
+    public void run(){
+
+        for(int i=0;i<5;i++){
+            System.out.println("count down "+i);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        System.out.println("my Runnable thread# 2 java running ");
+
+    }
+}
+
+//*-------------------------------------------------------------------------------
+
