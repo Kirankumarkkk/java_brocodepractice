@@ -1,0 +1,78 @@
+// data structures - like array to store related data
+
+// algorithm - series of steps to solve a problem
+
+// stack data structures  - LIFO data structures last in first-out
+// stores objects into a sort of "vertical tower" , push() to add to the top and pop() to remove from the top
+
+//* stack main program ---------------------------------------
+
+package datastructures.Stack;
+
+import java.util.Stack;
+
+public class StackMainclass {
+    public static void main(String[] args) {
+
+        Stack<String> stack= new Stack<String>();
+
+        stack.push("apple");
+        stack.push("mango");
+        stack.push("orange");
+        stack.push("pineapple");
+
+        System.out.println(stack.peek());    //to print last added item
+
+        String removelastitem=stack.pop();   //to remove last added item from stack
+        System.out.println(removelastitem);
+
+
+        System.out.println(stack.search("orange"));   //to check item in the stack position
+        System.out.println(stack.search("berry"));  //if any item is not present in stack it will give -1
+        System.out.println(stack.empty()); //to check stack is empty or not
+
+        System.out.println(stack);   //to print stack list
+
+    }
+}
+
+//*-------------------------------------------------------------------------------------------
+
+//* Queue DS
+
+
+// queue - FIFO data structure - First in first out , a collection designed for holding elements prior to processing linear data structure
+
+//add -enqueue , offer()   and remove- dequeue, poll()
+
+//Queue= linkedList since queue is template, we need to use parent class
+
+/uses in keyboard buffer, printer queue
+
+//*Main class
+
+package datastructures.Queue;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class QueueMainclass {
+    public static void main(String[] args) {
+
+        Queue<String> queue=new LinkedList<String>();
+
+        queue.offer("apple");  //add to the queue
+        queue.offer("mango");
+        queue.offer("orange");
+        System.out.println(queue);
+        String removeitem=queue.poll(); //remove first item from the queue
+        System.out.println(removeitem);
+        System.out.println(queue);
+        System.out.println(queue.peek());  //to see first item from the queue
+        System.out.println(queue.isEmpty()); //to check queue is empty or not
+        System.out.println(queue.size()); //to check the size of queue
+        System.out.println(queue.contains("orange"));  //to check whether item present in queue or not true or false
+    }
+}
+
+//*-------------------------------------------------------------------------------
