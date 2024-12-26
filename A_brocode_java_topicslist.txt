@@ -42,4 +42,13 @@ java method chaining #string name.concat().upperCase().trim()
 java enum   #enum EARTH(10)
 java HashMap  #HashMap<String,Integer,Double> countries.put or .remove .close .size key value pair
 java custom exceptions / user defined exceptions  # extends Exception , Exception e , super(m)
- 
+Java anonymous objects #loop through the objects data
+Java inner classes     #class inside a class , 
+Java anonymous inner classes  #class = new object and overrides method each objects
+java lambda #interface and pass parameter through lambda exp (x,y,z) -> { sout(x+y+z) }
+java generics #<Thing> using T or Thing generic method for all reference datatypes 
+Java serialization  #storing object in bytes and deserialization bytes to objects
+java TimerTask #to run method or thread on a schedule one time or multiple times
+java threads  #runs user thread then Daemon thread true or false
+java multi-threading #thread1.start() thread2.start() thread.setDaemon 
+java packages #import packagename.classname  to create instance/object
