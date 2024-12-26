@@ -1,0 +1,7 @@
+// data structures - like array to store related data
+
+// algorithm - series of steps to solve a problem
+
+// stack data structures  - LIFO data structures last in first-out
+// stores objects into a sort of "vertical tower" , push() to add to the top and pop() to remove from the top
+

@@ -1,0 +1,2038 @@
+import java.util.Scanner;
+//importing scanner for user provide input
+//GUI
+import java.util.Random;
+// importing Random class to generate numbers and boolean value
+
+import java.util.ArrayList;
+
+
+public class systemoutprintln {
+    public static void main(String args[]) {
+        int var1 = 1041;
+        int var2 = 1051;
+        int var3 = 10/3;
+        int var4 = 10%3;
+        double var5= 10.0/3.0;
+        double var6 = 10.0%3.0;
+        System.out.println("test " + var2);
+        System.out.println(var2);
+        System.out.println(var3);
+        System.out.println(var4);
+        System.out.println(var5);
+        System.out.println(var6);
+        System.out.println("First line \nSecond line \nThird line");
+        System.out.println("A\tB\tC");
+        System.out.println("D\tE\tF") ;
+        System.out.println("\bG") ;
+
+        String variable1="0";
+
+        int conditionValue = 15;
+        if (conditionValue < 10) {
+            variable1 = "10";
+        } else {
+            variable1 = "20";
+        }
+
+        // Output the result
+        System.out.println("The value of variable1 is: " + variable1);
+
+        int x=1;
+        double y=2.1;
+        long z=2999992828282L;
+        float e=293.2f;
+        boolean q=true;
+        boolean m =false;
+        char symbol='@';
+        String testkkk1="testkkk";
+
+        System.out.println("The value of x is: " + x);
+        System.out.println("The value of y is: " + y);
+        System.out.println("The value of z is: " + z);
+        System.out.println("The value of e is: " + e);
+        System.out.println("The value of q is: " + q);
+        System.out.println("The value of m is: " + m);
+        System.out.println("The value of symbol is: " + symbol);
+        System.out.println("The value of testkkk1 is: " + testkkk1);
+
+
+        String word1="water";
+        String word2="cooldrink";
+        String tempword=null;
+
+        tempword=word1;
+        word1=word2;
+        word2=tempword;
+
+        System.out.println("The value of word1 is: " + word1);
+        System.out.println("The value of word2 is: " + word2);
+
+        //scanner user input information
+
+        /* commenting for scanner code
+
+        Scanner scanner=new Scanner(System.in);
+
+        System.out.println("who are you? ");
+        String namepls= scanner.nextLine();
+
+        System.out.println("your age? ");
+        int age1=scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("your fav food? ");
+        String food=scanner.nextLine();
+
+        System.out.println("Hello " + namepls);
+        System.out.println("age " + age1);
+        System.out.println("fav food " + food);
+          comment end */
+        // scanner end
+
+        // arithmetic expressions
+
+        int friends=10;
+        friends=10+1;
+        int friends1=friends*2;
+        int friends2=friends++;
+
+        System.out.println("sum of friends " + friends);
+        System.out.println("mul of friends1 " + friends1);
+        System.out.println("increment ++ of friends2 " + friends2);
+
+        double friends3= 10/3;
+        System.out.println("division of friends3 " + friends3);
+
+        //type casting data type
+
+        double friends4=10;
+        friends4= (double) friends4/3 ;
+
+        System.out.println("division of friends4 " + friends4);
+
+        double friends5= (double) 10/3;
+        System.out.println("division of friends5 " + friends5);
+
+        //GUI graphical user interface gui accepts only string so we are parseing
+
+        /* gui start comment
+        String name_enter=JOptionPane.showInputDialog("Enter the name");
+        JOptionPane.showMessageDialog(null,"Hello " + name_enter);
+
+        int age_enter=Integer.parseInt(JOptionPane.showInputDialog("Enter the age"));
+        JOptionPane.showMessageDialog(null,"your age " + age_enter);
+
+        Double height_enter=Double.parseDouble(JOptionPane.showInputDialog("Enter the height"));
+        JOptionPane.showMessageDialog(null,"your height " + height_enter);
+
+         gui end comment */
+
+        // java maths
+
+        double x1=3.243;
+        double y1=-10;
+
+        double z1=Math.max(x1,y1);
+        System.out.println("max of x1,y1 " + z1);
+
+        double m1=Math.min(x1,y1);
+        System.out.println("max of x1,y1 " + m1);
+
+        double n1=Math.round(x1);
+        System.out.println("max of x1,y1 " + n1);
+
+        // Math hyptonesis squareroot ((x*x) + (y*y))
+
+        double x2;
+        double y2;
+        double z2;
+
+        Scanner scanner=new Scanner(System.in);
+
+        System.out.println("Enter x2 value");
+        //x2=scanner.nextDouble();
+
+        System.out.println("Enter y2 value");
+        //y2=scanner.nextDouble();
+
+        //z2=Math.sqrt((x2*x2)+(y2*y2));
+
+        //System.out.println("z2 hypotenesis value is" + z2);
+
+        // Random class generate numbers or boolean
+
+        Random random= new Random();
+
+        int x3=random.nextInt();
+        System.out.println("x3 random number is " + x3);
+
+        //to limit numbers we are mentioning value not to over come limit
+
+        int y3=random.nextInt(6)+1;
+        System.out.println("y3 random number is " + y3);
+
+        boolean z3=random.nextBoolean();
+        System.out.println("x3 random number is " + z3);
+
+        // if statements java
+
+        int age1=36;
+
+        if (age1<18) {
+            System.out.println("age is 18 for if statement");
+        } else if (age1<25) {
+            System.out.println("age is not 18 for else if statement");
+        }
+        else if (age1==35) {
+            System.out.println("age is 35 for else if statement");
+        }
+        else {
+            System.out.println("age is more than 25 for else statement");
+        }
+
+        // switches - statement used to test equality of a variable with list of values
+
+        String day="monday";
+
+        switch (day){
+            case "Sunday" : System.out.println("It's Sunday");
+            break;
+            case "Monday" : System.out.println("It's Monday");
+            break;
+            case "Friday" : System.out.println("It's Friday");
+            break;
+            default: System.out.println("It's not in the list");
+        }
+
+        // and or logic conditions
+
+        int temp1=10;
+
+        if (temp1>=10 && temp1>11){
+            System.out.println("temperature is less than 10 and greater than 9");
+        } else if (temp1>=2 || temp1<=11) {
+            System.out.println("temperature is greater than 2");
+        }
+
+        // string equal with ||
+
+        String stringvalue1="kiran";
+        String stringvalue2="kumar";
+
+        if ((!stringvalue1.equals(stringvalue2)) || (stringvalue2.equals("kumar"))){
+            System.out.println("stringvalue1 & stringvalue2 are not equal");
+
+        }
+
+        System.out.println("stringvalue1 "+ stringvalue1);
+        System.out.println("stringvalue2 "+ stringvalue2);
+
+        // while loop and do {} while () both works similar way
+
+        Scanner scanner1 = new Scanner(System.in);
+        String nameplsenter = "";
+
+        while(nameplsenter.isBlank()) {
+            System.out.print("Enter your name: ");
+             break;
+            //nameplsenter = scanner1.nextLine();
+        }
+
+        System.out.println("\n kiran Hello "+nameplsenter);
+
+        // for loop
+
+        for ( int i=1; i<5 ; i++){
+            System.out.println("for loop running");
+
+        }
+
+        // nested loops
+
+        Scanner scanner3 = new Scanner(System.in);
+        int rows;
+        int columns;
+        String symbol1 = "";
+
+        System.out.println("Enter # of rows: ");
+        //rows = scanner3.nextInt();
+        System.out.println("Enter # of columns: ");
+        //columns = scanner3.nextInt();
+        System.out.println("Enter symbol to use: ");
+        //symbol1 = scanner3.next();
+
+        /*
+        for(int i=1; i<=rows; i++) {
+            System.out.println();
+            for(int j=1; j<=columns;j++) {
+                System.out.print(symbol1);
+            }
+        }
+        */
+
+        // array is used to store multiple values in a single variable
+
+        // one way
+        String[] oldcars={"car1","car2","car3","123"};
+
+        oldcars[0] = "car4";
+
+        System.out.println(oldcars[0]);
+        System.out.println(oldcars[3]);
+
+        //another way
+        String[] newcars=new String[3];
+        newcars[0]="newcar1";
+        newcars[1]="newcar2";
+        newcars[2]="newcar3";
+
+        System.out.println(newcars[0]);
+
+        for (int carsi=0; carsi<newcars.length ; carsi++){
+            System.out.println(newcars[carsi]);
+
+        }
+
+        //2D array multiple arrays in a single variable
+
+        String[][] newbike={{"bike1","bike2","bike3"},
+                {"bike4","bike5","bike6"},
+                {"bike7","bike8","bike9"}};
+
+        for ( int newbike1=0;newbike1<newbike.length ; newbike1++) {
+            System.out.println();
+            for(int j=0; j<newbike[newbike1].length; j++) {
+                System.out.print(newbike[newbike1][j]+" ");
+            }
+        }
+
+
+        //String methods
+
+        String myname="kiran";
+        boolean nameis = myname.equals("kiran");
+        System.out.println("\n"+  nameis);
+
+        boolean nameis1 = myname.equalsIgnoreCase("Kiran");
+        System.out.println(nameis1);
+
+        //length of the string
+
+        int result1=myname.length();
+        System.out.println("number of chars " + result1);
+
+        //char placed at 3 index
+
+        char chars1=myname.charAt(3);
+        System.out.println("chars1 at 0 is " + chars1);
+
+        //index where char is placed
+
+        int index1=myname.indexOf("i");
+        System.out.println("index1 of i is " + index1);
+
+        //upper case string
+
+        String upper1=myname.toUpperCase();
+        System.out.println("making upper case  is " + upper1);
+
+        //lower case string
+
+        String lower1=myname.toLowerCase();
+        System.out.println("making lower case  is " + lower1);
+
+        boolean value1=myname.isEmpty();
+        System.out.println("making value1 case  is " + value1);
+
+        //trim method remove space
+
+        String myname1=" Kiran ";
+        System.out.println("making value1 case  is " + value1);
+        String myname2=myname1.trim();
+        System.out.println("making myname2 case  is " + value1);
+
+        //replace value
+
+        String myname3="dog";
+        System.out.println("myname3 case  is " + myname3);
+        String myname4=myname3.replace("dog","cat");
+        System.out.println("making myname4 case  is " + myname4);
+
+
+
+
+
+
+        //boolean
+
+        boolean result2=true;
+        boolean result4=false;
+
+        if(result2) {
+            System.out.println("boolean result2 is " + result2);
+            boolean result3=true;
+            if (result3){
+                System.out.println("inside result3 is " + result3);
+            }
+        }
+        if(!result4) {
+            System.out.println("boolean result4 is " + result4);
+            System.out.println("boolean result is " + (10 > 9));
+
+        }
+
+        // storing different in a variable
+        int result5=5;
+        System.out.println("boolean result5 is " + result5);
+        result5=6;
+        System.out.println("boolean result5 is " + result5);
+
+
+        double value_1,value_2,value_3;
+        value_1=0;
+        value_2=1;
+        value_3=2;
+
+        if (value_1!=value_2){
+            System.out.println("value1 is not equal to value value2");
+        }
+
+        if (value_1==0){
+            System.out.println("value1 is  equal to value 0");
+
+        }
+
+        int xvalue1=3;
+        if(xvalue1==3){
+            System.out.println("value of x1 before update "+ xvalue1);
+            //xvalue1=2;
+            int yvalue1=2;
+            xvalue1=xvalue1+yvalue1;
+            System.out.println("value of x1 after update "+ xvalue1);
+        }
+        for(xvalue1=0;xvalue1<3;xvalue1++){
+            int yvalue2=100;
+            System.out.println("value of yvalue2 after update "+ yvalue2);
+
+        }
+
+        int xvalue2=5;
+        double yvalue2=xvalue2;
+        System.out.println("value of yvalue2 after update "+ xvalue2);
+        System.out.println("value of yvalue2 after update "+ yvalue2);
+
+        String[] animalslist={"dog","cat","rabbit"};
+        for(String i : animalslist){
+            System.out.println(i);
+        }
+
+        ArrayList<String> animalslist1=new ArrayList();
+        animalslist1.add("dog1");
+        animalslist1.add("cat1");
+        animalslist1.add("rabbit1");
+
+        for (String i : animalslist1){
+            System.out.println(i);
+        }
+
+        //java method
+
+        // string and int method passing values to the method
+        String name_1="kiran";
+        int age_1=26;
+        int age_2=24;
+        //string method
+        hello(name_1,age_1);
+        //int method calling using a variable
+        int age12=add(age_1,age_2);
+        System.out.println("add method value is "+ age12);
+        //int method calling without variable
+        System.out.println("add method value is another way "+add(age_1,age_2));
+        //java overloaded method calling same method but different params
+        int age_3=10;
+        System.out.println("This is 2nd method with 2 params "+add(age_1,age_2,age_3));
+        //java overloaded double method
+        double agetotal=add(10.0,10.0);
+        System.out.println("double method "+agetotal);
+
+        //printf
+        //System.out.printf("to diplay int %10d",10);
+        //System.out.printf("to diplay int %-10d",10);
+        //System.out.printf("to diplay string %s","kkk");
+        //System.out.printf(" to diplay character %s","@");
+
+        //final keyword in java once defined, it cannot be changes
+
+        final double PIvalue=3.14156;
+        // PIvalue=2.1; since final keyword used we cannot assign new value
+        System.out.println(PIvalue);
+
+
+
+    }
+    //getting title=name_1=kiran value
+    static void hello(String title,int age1){
+        System.out.println("hello " + title+" " +age1);
+    }
+    //getting age_1 and age_2 values and adding
+    static int add(int x, int y){
+        int z=x+y;
+        return z;
+    }
+    //java overloaded double method
+    static double add(double x, double y){
+        double z=x+y;
+        return z;
+    }
+    //java overloaded method same method with diff params and values
+    static int add(int x, int y,int x1){
+        int z=x+y+x1;
+        return z;
+    }
+}
+
+
+//*************************************************************
+
+// java abstraction main class *****************************
+
+public class abstractionclassjava {
+    public static void main(String[] args) {
+
+        // since vehicle class is abstract class , it cannot instantiated - new object cannot create
+        // public abstract class classname for class
+        // abstract void methodname()
+        // in the parent class abstract method , we cannot add action, we need to add in child class
+
+        //abstractionclassvehicle abstractionclassvehicle=new abstractionclassvehicle() ;
+
+
+        abstractionclasscar abstractionclasscar=new abstractionclasscar();
+
+        abstractionclasscar.go();
+        abstractionclasscar.stop();
+    }
+}
+
+//** abstraction abstractionclassvehicle child class
+
+public abstract class abstractionclassvehicle {
+
+    abstract void go();
+    abstract void stop();
+}
+
+//** child class abstractionclasscar
+
+public class abstractionclasscar extends abstractionclassvehicle{
+    @Override
+    void go() {
+        System.out.println("vehicle is going");
+    }
+
+    @Override
+    void stop() {
+        System.out.println("vehicle is not going");
+    }
+}
+
+//************************************************************************************
+
+//java access modifier (public,protected,private)
+
+//creating 2 packages and create 2 class in each packages
+
+//no modifier eg defaultMessage String variable if we try to access from another class it won't work
+// it can be accessible in the same packages , if we tried to access from it will not show the variables
+
+// if String stringname="variable" this can be accessible only in the same package
+// if public String stringname="variable" this can be accessible from another class/another packages as well.
+
+//*******************************************
+public: visible in all classes in all packages
+protected: visible to all classes in the same package or classes in other packages that are a subclass
+default: visible to all classes in the same package
+private: visible only in the same class
+//*******************************************
+
+// create 2 packages , in package 1 classA and classB , in package 2 classC and classAsub
+
+//*********************************************
+// classA
+
+package accessmodifierpackage1;
+import accessmodifierpackage2.*;
+
+public class classA {
+
+    protected String protectedMessage="protected Message";
+
+    public static void main(String[] args) {
+
+        classC classC=new classC();
+        System.out.println(classC.publicMessage);
+        System.out.println(classC.package2message);
+
+        classB classb=new classB();
+        //System.out.println(classb.privateMessage);
+        //since above message is private it's only accessiable from the same class
+        System.out.println(classb.defaultmessage1);
+
+    }
+}
+
+//** classB
+
+package accessmodifierpackage1;
+import accessmodifierpackage2.*;
+
+public class classB {
+    private String privateMessage="This is private Message";
+    String defaultmessage1="this message from classB";
+}
+
+//** classC
+
+package accessmodifierpackage2;
+import accessmodifierpackage1.*;
+
+public class classC {
+    public String publicMessage="this is public message";
+    String defaultMessage="hello default message from classC package 2";
+    public String package2message="package2 message";
+
+}
+
+//** classAsub
+
+package accessmodifierpackage2;
+import accessmodifierpackage1.*;
+
+public class classAsub extends classA {
+
+    public static void main(String[] args) {
+
+        classC classC=new classC();
+        System.out.println(classC.defaultMessage);
+
+        classAsub classasub=new classAsub();
+
+        System.out.println(classasub.protectedMessage);
+    }
+}
+
+//********************************************************************
+
+//********java encapsulation
+
+//encapsulation - when variables are set to private in the class,
+ // can be acessiable , only using getter method and setter method , we can access private variables
+
+//*************encapsulationMainclass
+
+package encapsulationpackage;
+
+public class encapsulationMainclass {
+    public static void main(String[] args) {
+
+        encapsulationCarclass encapsulationcar=new encapsulationCarclass("BMW",2024);
+        System.out.println(encapsulationcar.getName());
+        System.out.println(encapsulationcar.getYear());
+
+        encapsulationcar.setName("Audi");
+        System.out.println(encapsulationcar.getName());
+
+        encapsulationcar.setYear(2025);
+        System.out.println(encapsulationcar.getYear());
+
+    }
+}
+
+//********encapsulationCarclass
+
+package encapsulationpackage;
+
+public class encapsulationCarclass {
+    private String name;
+    private int year;
+    encapsulationCarclass(String name,int year){
+        this.setName(name);
+        this.setYear(year);
+    }
+    public String getName(){
+        return name;
+    }
+    public int getYear(){
+        return year;
+    }
+
+    public void setName(String name){
+        this.name=name;
+    }
+
+    public void setYear(int year){
+        this.year=year;
+    }
+}
+
+//** java copy objects
+// create new object and in constructor add one more constructor for copy and add copy method
+
+// **encapsulationmainclass
+
+package encapsulationpackage;
+
+public class encapsulationMainclass {
+    public static void main(String[] args) {
+
+        encapsulationCarclass encapsulationcar=new encapsulationCarclass("BMW",2024);
+        System.out.println(encapsulationcar.getName());
+        System.out.println(encapsulationcar.getYear());
+
+        encapsulationcar.setName("Audi");
+        System.out.println(encapsulationcar.getName());
+
+        encapsulationcar.setYear(2025);
+        System.out.println(encapsulationcar.getYear());
+
+        encapsulationCarclass encapsulationcar1=new encapsulationCarclass("FORD",2024);
+        encapsulationCarclass encapsulationcar2=new encapsulationCarclass(encapsulationcar1);
+
+        System.out.println(encapsulationcar1);
+        System.out.println(encapsulationcar2);
+        System.out.println();
+        System.out.println(encapsulationcar1.getName());
+        System.out.println(encapsulationcar1.getYear());
+        System.out.println();
+        System.out.println(encapsulationcar2.getName());
+        System.out.println(encapsulationcar2.getYear());
+
+    }
+}
+
+//** encapsultioncarclass
+package encapsulationpackage;
+
+public class encapsulationCarclass {
+    private String name;
+    private int year;
+    encapsulationCarclass(String name,int year){
+        this.setName(name);
+        this.setYear(year);
+    }
+    encapsulationCarclass(encapsulationCarclass x){
+        this.copy(x);
+    }
+    public String getName(){
+        return name;
+    }
+    public int getYear(){
+        return year;
+    }
+
+    public void setName(String name){
+        this.name=name;
+    }
+
+    public void setYear(int year){
+        this.year=year;
+    }
+
+    public void copy(encapsulationCarclass x){
+        this.setName(x.getName());
+        this.setYear(x.getYear());
+    }
+}
+
+//**java interface - template for methods/action using implements interfacename1,interfacename2
+// we can use interface and override the method in class of implements
+// in the interface class only void methodname(); only present
+
+//*interfacemain class
+
+package javainterface;
+
+public class interfacemain {
+
+    public static void main(String[] args) {
+
+        rabbit rabbit1=new rabbit();
+        rabbit1.notcruel();
+        rabbit1.cruel();
+    }
+}
+
+//* prey
+
+package javainterface;
+
+public interface prey {
+
+    void notcruel();
+}
+
+// predator
+
+package javainterface;
+
+public interface predator {
+
+    void cruel();
+}
+
+// rabbit
+
+package javainterface;
+
+public class rabbit implements prey,predator {
+
+    public void notcruel(){
+        System.out.println("Rabbit is not cruel");
+    }
+
+    public void cruel(){
+        System.out.println("Hawk is cruel");
+    }
+
+
+}
+
+
+//** java polymorphism - poly-many morph -form , ability of object to identify as more than one type
+
+//* 2 class extends vehicle and new 2 objects as object stored and using for loop
+
+//*polymorphismmain
+
+package polymorphismjava;
+
+public class polymorphismmain {
+
+    public static void main(String[] args) {
+
+        polymorphismcar car1=new polymorphismcar();
+        polymorphismbycyle bycycle1=new polymorphismbycyle();
+
+        polymorphismvehicle[] vehicle1={car1,bycycle1};
+
+        for (polymorphismvehicle x : vehicle1){
+            x.go();
+        }
+    }
+}
+
+//polymorphismvehicle
+
+package polymorphismjava;
+
+public class polymorphismvehicle {
+
+    public void go(){
+    }
+}
+
+//polymorphismcar
+
+package polymorphismjava;
+
+public class polymorphismcar extends polymorphismvehicle{
+
+    public void go(){
+        System.out.println("car is moving");
+    }
+}
+
+//polymorphismbycyle
+
+package polymorphismjava;
+
+  public class polymorphismbycyle extends  polymorphismvehicle{
+      public void go(){
+          System.out.println("Bycycle is moving");
+      }
+  }
+
+//** dynamic polymorphism - dynamic- after compilation - during runtime
+// 1= cat , 2=dog , animal eg
+
+
+package polymorphismjava;
+
+import java.util.Scanner;
+
+public class dynamicpolymorphismMain {
+    public static void main(String[] args) {
+        Scanner scanner1=new Scanner(System.in);
+        dynamicpolymorphismAnimal Animal;
+
+        System.out.println("what animal do you want?");
+        System.out.println("1=cat and 2=dog");
+        int choice=scanner1.nextInt();
+
+        if (choice==1){
+            Animal= new dynamicpolymorphismCat();
+            Animal.speak();
+        } else if (choice==2) {
+            Animal=new dynamicpolymorphismDog();
+            Animal.speak();
+
+        }
+        else {
+            Animal=new dynamicpolymorphismAnimal();
+            Animal.speak();
+        }
+
+
+    }
+}
+
+//* dynamicpolymorphismAnimal
+
+package polymorphismjava;
+
+public class dynamicpolymorphismAnimal {
+
+    public void speak(){
+        System.out.println("Enter value is invalid");
+    }
+}
+
+//* polymorphismjava
+
+package polymorphismjava;
+
+public class dynamicpolymorphismCat extends dynamicpolymorphismAnimal{
+
+    public void speak(){
+        System.out.println("Cat says MEOW MEOW");
+    }
+
+}
+
+//* dynamicpolymorphismDog
+
+package polymorphismjava;
+
+public class dynamicpolymorphismDog extends dynamicpolymorphismAnimal {
+
+    public void speak(){
+        System.out.println("Dog Barks Barks BOW BOW");
+    }
+}
+
+//*************** Exception handling if we expect error use try{} catch(error e) finally{}
+
+//* exceptionHandlingMain
+
+package exceptionHandling;
+
+import java.util.Scanner;
+
+public class exceptionHandlingMain {
+    public static void main(String[] args) {
+        Scanner scanner1=new Scanner(System.in);
+
+        try {
+            System.out.println("Enter a number to divide: ");
+            int x = scanner1.nextInt();
+            System.out.println("Enter a number to divide by: ");
+            int y = scanner1.nextInt();
+            int z = x / y;
+            System.out.println("z value is " + z);
+        }
+        catch(Exception e){
+            System.out.println("We can divide by zero");
+        }
+
+        finally {
+            scanner1.close();
+            System.out.println("this will print always");
+        }
+    }
+}
+
+//***** java File class to check file present or not, get path and delete
+// filename.txt with extension also can give and make sure file present in the project if we are giving file name
+
+//* fileClassMain
+
+package FileClass;
+
+import java.io.File;
+
+public class fileClassMain {
+
+    public static void main(String[] args) {
+
+        File file1=new File("C:\\Users\\a921731\\Desktop\\JAVA files\\firstProject\\src\\A_brocode_practice code and comments.txt");
+
+        if(file1.exists()){
+
+            System.out.println("File present");
+            System.out.println(file1.getPath());
+            System.out.println(file1.getAbsolutePath());
+            System.out.println(file1.isFile());
+            //file1.delete();
+            //above code will delete the file
+        }
+        else {
+            System.out.println("File doesn't exist");
+        }
+    }
+
+}
+
+//* FileWriter write - create new file and text in the file
+
+// ** fileClassMain look for writer
+
+package FileClass;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class fileClassMain {
+
+    public static void main(String[] args) {
+
+        File file1=new File("C:\\Users\\a921731\\Desktop\\JAVA files\\firstProject\\src\\A_brocode_practice code and comments.txt");
+
+        if(file1.exists()){
+
+            System.out.println("File present");
+            System.out.println(file1.getPath());
+            System.out.println(file1.getAbsolutePath());
+            System.out.println(file1.isFile());
+            //file1.delete();
+            //above code will delete the file
+        }
+        else {
+            System.out.println("File doesn't exist");
+        }
+
+        try{
+            FileWriter writer1=new FileWriter("poem.txt");
+            writer1.write("Roses are red\nviolets are blue");
+            writer1.append("\nThis is the end");
+            writer1.close();
+
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+
+    }
+
+}
+
+//* File Reader
+
+	// FileReader = read the contents of a file as a stream of characters. One by one
+		//				read() returns an int value which contains the byte value
+		//				when read() returns -1, there is no more data to be read
+
+package FileClass;
+import java.io.FileReader;
+import java.io.*;
+
+public class FileReaderMain {
+    public static void main(String[] args) {
+        try {
+            FileReader reader = new FileReader("art.txt");
+            int data = reader.read();
+            while(data != -1) {
+                System.out.print((char)data);
+                data = reader.read();
+            }
+            reader.close();
+
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+    }
+}
+
+// ** GUI java dialogue box open with color and all
+
+package GUIjava;
+import java.awt.Color;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+
+public class GUIjavaMain {
+    public static void main(String[] args) {
+
+        // JFrame = a GUI window to add components to
+
+        JFrame frame = new JFrame(); //creates a frame
+        frame.setTitle("JFrame title goes here"); //sets title of frame
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit from application
+        frame.setResizable(false); //prevent frame from being resized
+        frame.setSize(420,420); //sets the x-dimension, and y-dimension of frame
+        frame.setVisible(true); //make frame visible
+
+        ImageIcon image = new ImageIcon("supermariologo.png"); //create an ImageIcon
+        frame.setIconImage(image.getImage()); //change icon of frame
+        frame.getContentPane().setBackground(new Color(123,50,250)); //change color of background
+
+    }
+}
+
+//*****GUI class calling from another class
+
+// **** main class GUIMain
+
+package GUIjava;
+import javax.swing.JFrame;
+public class GUIMain {
+
+    public static void main(String[] args) {
+        myFrame myFrame=new myFrame();
+    }
+}
+
+// **myFrame
+
+package GUIjava;
+import java.awt.Color;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+
+public class myFrame extends JFrame {
+
+        // JFrame = a GUI window to add components to
+        myFrame() {
+            //JFrame frame = new JFrame(); //creates a frame
+            this.setTitle("JFrame title goes here"); //sets title of frame
+            this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit from application
+            this.setResizable(false); //prevent frame from being resized
+            this.setSize(420, 420); //sets the x-dimension, and y-dimension of frame
+            this.setVisible(true); //make frame visible
+
+            ImageIcon image = new ImageIcon("supermariologo.png"); //create an ImageIcon
+            this.setIconImage(image.getImage()); //change icon of frame
+            this.getContentPane().setBackground(new Color(123, 50, 250)); //change color of background
+        }
+
+}
+
+//** java method chaining -----------------
+
+public class methodChaining {
+    public static void main(String[] args) {
+
+        //method chaining = a common syntax for invoking multiple method calls in oop condense code into less lines
+
+        String name="    hello ";
+        name=name.concat("bro");
+        String nameupper=name.toUpperCase();   //to make uppercase
+        String namewithoutspace=name.trim();   //to remove spaces
+        String combineallmethods=name.concat(" kiran").toUpperCase().trim(); //combine all methods
+
+        System.out.println(name);
+        System.out.println(nameupper);
+        System.out.println(namewithoutspace);
+        System.out.println(combineallmethods);
+
+
+    }
+}
+
+//** enum collection of list calling from class and method ----------------
+
+//Enum -enumerated(ordered listing of items in a collection )
+//grouping of constants that behave similarly to objects
+
+enum Planet{
+    EARTH(1),
+    MARS(2),
+    SUN(3);
+
+    int number;
+    Planet(int number){
+        this.number=number;
+    }
+
+}
+
+public class enumMainclass {
+    public static void main(String[] args) {
+
+        Planet myplant=Planet.SUN;
+        canilivehere(myplant);
+    }
+
+    static void canilivehere(Planet myplant){
+        switch (myplant){
+            case EARTH:
+                System.out.println("you can live here");
+                System.out.println("this planet #"+myplant.number);
+                break;
+            default:
+                System.out.println("you can't live here");
+                System.out.println("this planet #"+myplant.number);
+        }
+    }
+}
+
+//** HashMap class storing key value pairs and using loop to print all key and value
+
+
+import java.util.HashMap;
+
+
+public class Hashmapmain {
+
+    public static void main(String[] args) {
+
+        HashMap<String,String> countries= new HashMap<String,String>();
+
+        //HashMap is similar to arraylist, but with key-value pair like eg (name,email)
+
+        //need to use full names Integer,String, Double, Boolean
+
+        countries.put("IND","INDIA");
+        countries.put("AUS","AUSTRALIA");
+        countries.put("UK","ENGLAND");       //to add key paired value to the HashMap
+        System.out.println(countries);
+        countries.remove("UK");               //to remove key value and it's object
+        System.out.println(countries.get("IND")); // to get value using key
+        // countries.clear();                  //to remove all values in HashMap
+        System.out.println(countries.size());   //to know the size of HashMap
+        System.out.println(countries.containsKey("IND")); //to check whether key is present in HashMap true or false only
+        System.out.println(countries.containsValue("INDIA"));  //to check value is present or not -> true or false
+        System.out.println(countries.containsValue("UK"));  //to check value is present or not -> true or false
+
+
+        // loop to print all key values
+
+        for (String i : countries.keySet()){
+            System.out.print(i +"\t"+"= " );
+            System.out.println(countries.get(i));
+        }
+        HashMap<String,Integer> contactinfo= new HashMap<String,Integer>();
+        contactinfo.put("Kiran",9100);
+        contactinfo.put("Manoj",8100);
+        System.out.println(contactinfo);
+
+        for (String i : contactinfo.keySet()){
+            System.out.print(i +"\t"+"= " );
+            System.out.println(contactinfo.get(i));
+        }
+    }
+}
+
+
+//* custom error exception or user defined exception
+
+
+// main class
+
+import java.util.Scanner;
+
+public class customExceptionmain {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter your age: ");
+        int age = scan.nextInt();
+
+        try{
+            checkAge(age);
+        }
+        catch(Exception e)
+        {
+            System.out.println("A problem occured: "+e);
+        }
+    }
+
+    static void checkAge(int age)throws AgeException {
+
+        if (age < 18) {
+            throw new AgeException("\n" + "You must be 18+ to sign up");
+        } else {
+            System.out.println("You are now signed up!");
+        }
+    }
+}
+
+// exception class
+
+public class AgeException extends Exception{
+    AgeException(String message){
+        super(message);
+    }
+}
+
+//-----------------------------------------------------------------------------------------
+//* Java anonymous objects
+
+import java.awt.*;
+import java.util.*;
+import javax.swing.*;
+
+public class anonymousObjectmain {
+
+    public static void main(String[] args) {
+
+        JFrame frame = new JFrame();
+        ArrayList<JLabel> deck = new ArrayList<JLabel>();
+
+		/*
+		ImageIcon AC = new ImageIcon("src\\cards\\1.png");
+		JLabel AClabel = new JLabel(AC);
+		deck.add(AClabel);
+
+		ImageIcon TwoC = new ImageIcon("src\\cards\\2.png");
+		JLabel TwoClabel = new JLabel(TwoC);
+		deck.add(TwoClabel);
+
+		... repeat for all 52 cards :(
+		*/
+
+        for(int i =1;i<=52;i++) {
+            deck.add(new JLabel(new ImageIcon("src\\cards\\"+i+".png")));
+            frame.add(deck.get(i-1));
+        }
+
+        //frame.add(deck.get(0));
+        //frame.add(deck.get(1));
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(420, 420);
+        frame.setLayout(new FlowLayout());
+        frame.setVisible(true);
+    }
+}
+
+//-------------------------------------------------------------------------------
+// inner class -a class inside of another class helps group classes that belong together , extremely useful for listeners for specific events
+//*Java inner classes class inside a class
+
+//main class
+
+public class InnerClassmain {
+    public static void main(String[] args) {
+
+        outSideclass out=new outSideclass();
+        outSideclass.inSideclass in=out.new inSideclass();
+        in.greetings();
+    }
+}
+
+//outSide and inside class
+
+public class outSideclass {
+    String x="Hello ";
+
+    public class inSideclass{
+        String y="World !";
+        public void greetings(){
+            System.out.println(x+y);
+        }
+    }
+
+
+}
+
+//--------------------------------------------------------------------------------
+
+//* java inner anonymous inner class
+//* main class class another class and overrides the methods
+
+public class InnerClassmain {
+    public static void main(String[] args) {
+
+        //outSideclass and inSideclass both classes
+        outSideclass out=new outSideclass();
+        outSideclass.inSideclass in=out.new inSideclass();
+        in.greetings();
+
+        //innerclassGreeting override 1
+
+        innerclassGreeting innerclassGreeting1=new innerclassGreeting(){
+            @Override
+            public void greetings() {
+                System.out.println("yo bro");
+            }
+        };
+
+        innerclassGreeting1.greetings();
+
+        //innerclassGreeting override 2
+
+        innerclassGreeting innerclassGreeting2=new innerclassGreeting(){
+            @Override
+            public void greetings() {
+                System.out.println("yo hello");
+            }
+        };
+
+        innerclassGreeting2.greetings();
+
+    }
+}
+
+//* innerclassGreeting class method class
+
+public class innerclassGreeting {
+    public void greetings(){
+        System.out.println("Hello greetings");
+    }
+}
+
+//*----------------------------------------------------------------------------------------
+//* lambda #interface and pass parameter through lambda exp (x,y) -> { sout(x+y) }
+//*lambda a shorter way to write anonymous classes  and a lambda expression can be used in any place where a functional interface is required
+//*lambda expression: (arguments) -> {statement/s}
+
+//myinterface interface
+
+package lambdapackage;
+@FunctionalInterface
+
+public interface myinterface {
+    public void message(String name,char symbol,String name1);
+
+}
+
+//lamda main java
+
+package lambdapackage;
+
+public class lambdaMain {
+    public static void main(String[] args) {
+
+        String name="bro";
+        char symbol='!';
+        String name1="again";
+
+        myinterface myinterface1=(x,y,z) -> {
+            System.out.println("hey "+x+y+z);
+        };
+
+        myinterface myinterface2=(x,y,z) -> System.out.println("hey dude "+x+y+z);
+
+        myinterface1.message(name,symbol,name1);
+        myinterface2.message(name,symbol,name1);
+
+    }
+}
+
+//------------------------------------------------------------------------------
+
+// java generics = enable types (classes and interfaces) to be parmeters when defining : classes, interfaces and methods
+// a benefit is to eliminate the need to create multiple versions of method or classes for various data types
+// create 1 version of method to handle all referencedatatypes
+
+//*java generic method below class
+
+
+public class genericsMain {
+    public static void main(String[] args) {
+
+        Integer[] intArray={1,2,3,4};
+        Double[] doubleArray={1.1,2.2,3.3,4.4};
+        String[] strArray={"A","B","C","D"};
+        Character[] charArry={'!','@','$','&'};
+        displayArray(intArray);
+        displayArray(doubleArray);
+        displayArray(strArray);
+        displayArray(charArry);
+        System.out.println(getFirstArry(strArray));
+        System.out.println(getFirstArry(charArry));
+
+
+    }
+    //method to display array for all data types
+    public static<Thing> void displayArray(Thing[] arrayeach) {
+        for (Thing x : arrayeach) {
+            System.out.print(x + " ");
+        }
+        System.out.println();
+
+    }
+
+    //method to return array[0] first value for all data types
+
+    public static<Thing> Thing getFirstArry(Thing[] array){
+        return array[0];
+    }
+}
+
+//----------
+
+//* java generic class below classes
+
+//*generic class
+package Generics;
+
+public class myGenericsclass<Thing> {
+    Thing x;
+    myGenericsclass(Thing x){
+    this.x=x;
+    }
+    public Thing getValue(){
+        return x;
+    }
+}
+
+//*main class
+
+package Generics;
+
+public class genericsMain {
+    public static void main(String[] args) {
+        myGenericsclass<String> mygenericclassString= new myGenericsclass<>("String");
+        myGenericsclass<Integer> mygenericclassInteger= new myGenericsclass<>(1);
+        myGenericsclass<Double> mygenericclassDouble= new myGenericsclass<>(5.5);
+        myGenericsclass<Character> mygenericclassChar= new myGenericsclass<>('$');
+
+        System.out.println(mygenericclassString.getValue());
+        System.out.println(mygenericclassInteger.getValue());
+        System.out.println(mygenericclassDouble.getValue());
+        System.out.println(mygenericclassChar.getValue());
+
+    }
+}
+//*-----------------------------------------------------
+//* java generics with array and hashmap below 2 classes
+// bounded types = you can create the objects of a generic class to have data of specific derived types ex.Number
+//* my genericsclass below
+
+package Generics;
+
+public class myGenericsclass<Thing, Thing2> {
+    Thing x;
+    Thing2 y;
+    myGenericsclass(Thing x, Thing2 y){
+    this.x=x;
+    this.y=y;
+    }
+    public Thing2 getValue(){
+        return y;
+    }
+}
+
+//*genericsmain class
+
+
+package Generics;
+
+import java.util.ArrayList;
+
+public class genericsMain {
+    public static void main(String[] args) {
+        myGenericsclass<String,Character> mygenericclassString= new myGenericsclass<>("String",'$');
+        myGenericsclass<Integer,Integer> mygenericclassInteger= new myGenericsclass<>(1,2);
+        myGenericsclass<Double,Double> mygenericclassDouble= new myGenericsclass<>(5.5,3.3);
+        myGenericsclass<Character,Character> mygenericclassChar= new myGenericsclass<>('$','@');
+
+        System.out.println(mygenericclassString.getValue());
+        System.out.println(mygenericclassInteger.getValue());
+        System.out.println(mygenericclassDouble.getValue());
+        System.out.println(mygenericclassChar.getValue());
+
+        ArrayList<String> myfriends= new ArrayList<>();
+        myfriends.add("Kiran");
+        myfriends.add("Kumar");
+        System.out.println(myfriends);
+        System.out.println(myfriends.getFirst());
+
+    }
+}
+
+//*------------------------------------------------------------------------------
+// * java Serialization
+
+//Java serialization = serialVersionUID is a unique ID that functions like a version
+
+//Serialization = the process of converting an object into a byt stream. Persists (saves the state) the object after program exits this byte stream can be saved as a file or sent over a network can be sent to a different machine
+//Byte stream can be saved as a file (.ser) which is platform independent (think of this as if you're saving a file with the object's information)
+
+
+//deserialization = the reverse process of converting a byte stream i
+
+//Steps to serialize
+//1. your object class should implement serializable interface
+//2. add import java.io.Serializable;
+//3. FileOutputStream fileOut= new FileOutputStream(file path or  "userinfo.ser")
+//4. ObjectOutputStream out=new ObjectOutputStream(fileOut);
+//5. out.writeObject(objectName)
+//6. out.close(); fileOut.close();
+
+//Steps to Deserialize
+//1.Declare your object ( don't instantiate)
+//2.your class should implement serializable interface
+//3.add import java.io.Serializable;
+//4.FileInputStream fileIn=new FileInputStream(file path);
+//5.ObjectInputStream in=new ObjectInputStream(fileIn);
+//6.objectName=(Class) in.readObject();
+//7.in.close(); fileIn.close();
+
+//*--- serialization user class program
+package Serialization;
+
+import java.io.Serializable;
+
+public class users implements Serializable {
+    String name;
+    String password;
+
+    public void sayHello(){
+        System.out.println("Hey "+ name+" "+ password );
+    }
+}
+
+//*serialization main class
+
+package Serialization;
+import java.io.*;
+
+public class serializationMain {
+    public static void main(String[] args) throws IOException {
+
+        users user=new users();
+        user.name="kiran";
+        user.password="1234";
+
+        //user1.sayHello();
+
+        FileOutputStream fileOut= new FileOutputStream("C:\\Users\\a921731\\Desktop\\JAVA files\\firstProject\\userinfo.ser");
+        ObjectOutputStream out=new ObjectOutputStream(fileOut);
+        out.writeObject(user);
+        out.close();
+        fileOut.close();
+
+        System.out.println("Object saved!");
+
+    }
+}
+//* Deserialization class users
+
+package DeSerialization;
+
+import java.io.Serializable;
+
+public class users implements Serializable {
+    String name;
+    String password;
+
+    public void sayHello(){
+        System.out.println("Hey "+ name+" "+ password );
+    }
+}
+
+// Deserialization main class
+
+package DeSerialization;
+import java.io.*;
+import Serialization.users;
+
+public class DeSerializationMain {
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
+
+        users user=null;
+        FileInputStream fileIn=new FileInputStream("C:\\Users\\a921731\\Desktop\\JAVA files\\firstProject\\src\\DeSerialization\\userinfo.ser");
+        ObjectInputStream in=new ObjectInputStream(fileIn);
+        //objectName=(Class) in.readObject();
+        user = (users) in.readObject();
+        in.close();
+        fileIn.close();
+
+        System.out.println(user.name);
+        System.out.println(user.password);
+        user.sayHello();
+
+    }
+}
+
+//* bro java code below for serialization and deserialization ------------------------------------------
+
+Java Serialization
+
+import java.io.*;
+
+public class SerializeDemo {
+
+   public static void main(String [] args) {
+
+	   //Serialization = 	The process of converting an object into a byte stream.
+	   //					Persists (saves the state) the object after program exits
+	   //					This byte stream can be saved as a file or sent over a network
+	   //					Byte stream can be saved as a file (.ser) which is platform independent
+	   //					(Think of this as if you're saving a file with the object's information)
+
+	   //					Steps to Serialize
+	   //					---------------------------------------------------------------
+	   //					1. Your class should implement Serializable interface
+	   //					2. add import java.io.Serializable;
+	   //					3. FileOutputStream fileOut = new FileOutputStream(file path)
+	   //					4. ObjectOutputStream out = new ObjectOutputStream(fileOut);
+	   //					5. out.writeObject(objectName)
+	   //					6. out.close(); fileOut.close();
+	   //					---------------------------------------------------------------
+
+	   //Deserialization = 	The reverse process of converting a byte stream into an object.
+	   //					(Think of this as if you're loading a saved file)
+
+	   //					Steps to Deserialize
+	   //					---------------------------------------------------------------
+	   //					1. Your class should implement Serializable interface
+	   //					2. add import java.io.Serializable;
+	   //					3. FileInputStream fileIn = new FileInputStream(file path);
+	   //					4. ObjectInputStream in = new ObjectInputStream(fileIn);
+	   //					5. objectNam = (Class) in.readObject();
+	   //					6. in.close(); fileIn.close();
+	   //					---------------------------------------------------------------
+
+	   // important notes	1. children classes of a parent class that implements Serializable will do so as well
+	   //					2. static fields are not serialized (they belong to the class, not an individual object)
+	   //					3. Fields declared as "transient" aren't serialized, they're ignored
+	   //					4. the class's definition ("class file") itself is not recorded, cast it as the object type
+	   //					5. serialVersionUID is a unique version ID
+
+	   //SerialVersionUID =	serialVersionUID is a unique ID that functions like a version #
+	   //					verifies that the sender and receiver of a serialized object,
+	   //					have loaded classes for that object that are compatible
+	   //					Ensures object will be compatible between machines
+	   //					Number must match. otherwise this will cause a InvalidClassException
+	   //					A SerialVersionUID will be calculated based on class properties, members, etc.
+	   //					A serializable class can declare its own serialVersionUID explicitly (recommended)
+
+      User user = new User();
+
+      user.name = "Bro";
+      user.password = "I<3Pizza";
+
+      try {
+         FileOutputStream fileOut = new FileOutputStream("C:\\Users\\Cakow\\eclipse-workspace\\SerializeDemo\\employee.ser");
+         ObjectOutputStream out = new ObjectOutputStream(fileOut);
+         out.writeObject(user);
+
+         out.close();
+         fileOut.close();
+         System.out.println("Object saved!");
+      } catch (IOException i) {
+         i.printStackTrace();
+      }
+
+      long serialVersionUID = ObjectStreamClass.lookup(user.getClass()).getSerialVersionUID();
+      System.out.println("serialVersionUID: "+serialVersionUID);
+   }
+}
+
+
+//----------------------------------------------------------------------------------------------
+import java.io.Serializable;
+
+public class User implements Serializable {
+
+	private static final long serialVersionUID = 123;
+
+	String name;
+	transient String password; //transient values are ignored
+
+	public void hello() {
+		System.out.println("Welcome "+name);
+	}
+}
+
+//----------------------------------------------------------------------------------------------
+import java.io.*;
+public class Deserialize {
+
+   public static void main(String [] args) {
+
+      User user = null;
+
+      FileInputStream fileIn;
+		try {
+			fileIn = new FileInputStream("C:\\Users\\Cakow\\eclipse-workspace\\SerializeDemo\\employee.ser");
+	         ObjectInputStream in = new ObjectInputStream(fileIn);
+	         user = (User) in.readObject();
+	         in.close();
+	         fileIn.close();
+
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	  long serialVersionUID = ObjectStreamClass.lookup(user.getClass()).getSerialVersionUID();
+	  System.out.println("serialVersionUID: "+serialVersionUID);
+
+      System.out.println("name: " + user.name);
+      System.out.println("password: " + user.password);
+
+      user.hello();
+
+   }
+}
+
+//* end of the code for serialization and deserialization ---------------
+
+//* ---------------------------------------------------------------
+
+//* TimerTask
+
+//Timer= A facility for threads to schedule tasks for future execution in a background thread
+//TimerTask= A task that can be scheduled for one-time or repeated execution by a timer
+
+//* timertaskmain class
+
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class timerTaskmain {
+    public static void main(String[] args) {
+
+        Timer timer=new Timer();
+        TimerTask task=new TimerTask() {
+            @Override
+            public void run() {
+                System.out.println("TimerTask class ran successfully");
+            }
+        };
+
+        timer.schedule(task,3000);
+    }
+}
+
+//*timertask count down class
+
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.Calendar;
+public class timerTaskmain {
+    public static void main(String[] args) {
+
+        Timer timer = new Timer();
+        TimerTask task = new TimerTask() {
+
+            int counter = 10;
+            @Override
+            public void run() {
+                if(counter>0) {
+                    System.out.println(counter+" seconds");
+                    counter--;
+                }
+                else {
+                    System.out.println("HAPPY NEW YEAR!");
+                    timer.cancel();
+                }
+            }
+        };
+
+        //timer.schedule(task, 0); run instantly
+        //timer.schedule(task, 3000); run in 3000 milli seconds
+
+        Calendar date = Calendar.getInstance();
+        date.set(Calendar.YEAR,2020);
+        date.set(Calendar.MONTH,Calendar.DECEMBER);
+        date.set(Calendar.DAY_OF_MONTH,31);
+        date.set(Calendar.HOUR_OF_DAY,23);
+        date.set(Calendar.MINUTE,59);
+        date.set(Calendar.SECOND,50);
+        date.set(Calendar.MILLISECOND,0);
+
+        //timer.schedule(task, 0);
+        //timer.schedule(task, date.getTime());
+        //timer.scheduleAtFixedRate(task, 0, 1000);
+        timer.scheduleAtFixedRate(task, date.getTime(), 1000);
+    }
+
+}
+
+//*------------------------------------------------------------------
+//* java threads  main java
+
+// threads runs main and isdeamon true or false
+
+package javathreads;
+
+//java virtual machine continues to execute threads until either of 1. the exit method of class runtime has been called  , 2 . all user threads have died
+
+public class javathreadsmain {
+    public static void main(String[] args) throws InterruptedException {
+        //System.out.println("hey thread");
+        Thread.currentThread().setName("javathreadsmain");
+        System.out.println(Thread.activeCount());
+        System.out.println(Thread.currentThread().getName());
+        Thread.currentThread().setPriority(10);
+        System.out.println(Thread.currentThread().getPriority());
+        boolean alive = Thread.currentThread().isAlive();
+        System.out.println(alive);
+        for(int i=3;i>0;i--){
+            System.out.println(i);
+            Thread.sleep(1000);
+        }
+
+        System.out.println("thread is done");
+
+        mythread thread1= new mythread();
+
+        thread1.setDaemon(true);   //false for undo Daemon
+        System.out.println(thread1.isDaemon());
+
+        System.out.println(thread1.currentThread().getName());
+        thread1.start();
+
+        //System.out.println(thread1.currentThread().isAlive());
+        //System.out.println(thread1.activeCount());
+
+
+
+
+
+    }
+}
+
+// mythread java program
+
+
+package javathreads;
+
+public class mythread extends Thread{
+
+    @Override
+    public void run(){
+        if(this.isDaemon()) {
+            System.out.println("this isDaemon thread ");
+        }
+        else {
+            System.out.println("this user thread");
+        }
+    }
+}
+
+//------------------------------------------------------------------------------------
+
+//* multi threading main java
+
+//multithreading - process of executing multiple threads simultaneously helps maximum utilization of cpu
+
+// threads are independent, they don't affect the execution of other threads
+
+//an execution in one thread doesn't affect the execution of other threads
+
+//mymultithreading main
+
+package javathreads;
+
+public class mymultithreadingmain {
+    public static void main(String[] args) throws InterruptedException {
+
+    mymultithread thread1=new mymultithread();
+   //thread1.run();
+
+        //or
+
+        myrunnable runnable1= new myrunnable();
+        Thread thread2=new Thread(runnable1);
+        //thread2.run();
+        //thread1.setDaemon(true); //set Daemon true
+        //thread2.setDaemon(true);
+
+        thread1.start();
+        thread1.join(2000);   //running thread 1 start then thread 2
+        thread2.start();
+
+
+
+    }
+}
+
+//mymultithread
+
+package javathreads;
+
+public class mymultithread extends Thread{
+
+    @Override
+
+    public void run(){
+
+        for(int i=10;i>0;i--){
+            System.out.println("count down "+i);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        System.out.println("mymultithread #1 is done");
+    }
+}
+
+//myrunnable implements Runnable
+
+package javathreads;
+
+public class myrunnable implements Runnable{
+
+    @Override
+
+    public void run(){
+
+        for(int i=0;i<5;i++){
+            System.out.println("count down "+i);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        System.out.println("my Runnable thread# 2 java running ");
+
+    }
+}
+
+//*-------------------------------------------------------------------------------
+
+//* packages and classes / instances
+
+//* into order to create a object / instance by calling another class first package import required
+
+//* packages main class
+
+
+package packages.packagemain;
+
+import packages.packagechild.packagechild;
+
+public class packagemain {
+    public static void main(String[] args) {
+
+        packagechild childpackage= new packagechild();
+
+        System.out.println("packagechild created instance with name childpackage");
+    }
+}
+
+
+//* package child class
+
+
+package packages.packagechild;
+
+public class packagechild {
+}
+
+
+//* ----------------------------------------------------------------------------------
+
+
