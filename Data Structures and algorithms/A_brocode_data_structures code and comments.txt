@@ -127,3 +127,67 @@ public class priorityqueuemain {
 //*-------------------------------------------------------------------------------------------------------
 
 
+//Enum -enumerated(ordered listing of items in a collection ) 
+//grouping of constants that behave similarly to objects
+
+
+//HashMap is similar to arraylist, but with key-value pair like eg (name,email)
+
+// user defined exceptions = custom exceptions
+
+// inner class -a class inside of another class helps group classes that belong together , extremely useful for listeners for specific events 
+
+//lambda a shorter way to write anonymous classes  and a lambda expression can be used in any place where a functional interface is required
+//lambda expression: (arguments) -> {statement/s}
+
+// java generics = enable types (classes and interfaces) to be parmeters when defining : classes, interfaces and methods 
+// a benefit is to eliminate the need to create multiple versions of method or classes for various data types
+// create 1 version of method to handle all referencedatatypes
+
+// bounded types = you can create the objects of a generic class to have data of specific derived types ex.Number
+
+//Java serialization = serialVersionUID is a unique ID that functions like a version 
+
+//Serialization = the process of converting an object into a byt stream. Persists (saves the state) the object after program exits this byte stream can be saved as a file or sent over a network can be sent to a different machine
+//Byte stream can be saved as a file (.ser) which is platform independent (think of this as if you're saving a file with the object's information)
+
+
+//deserialization = the reverse process of converting a byte stream into a object (think of this as if you're loading a saved file
+
+//Steps to serialize
+//1. your object class should implement serializable interface
+//2. add import java.io.Serializable;
+//3. FileOutputStream fileOut= new FileOutputStream(file path or  "userinfo.ser")
+//4. ObjectOutputStream out=new ObjectOutputStream(fileOut);
+//5. out.writeObject(objectName)
+//6. out.close(); fileOut.close();
+
+//Steps to Deserialize
+//1.Declare your object ( don't instantiate)
+//2.your class should implement serializable interface
+//3.add import java.io.Serializable;
+//4.FileInputStream fileIn=new FileInputStream(file path);
+//5.ObjectInputStream in=new ObjectInputStream(fileIn);
+//6.objectName=(Class) in.readObject();
+//7.in.close(); fileIn.close();
+
+//* java TimerTask
+
+//Timer= A facility for threads to schedule tasks for future execution in a background thread
+//TimerTask= A task that can be scheduled for one-time or repeated execution by a timer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
