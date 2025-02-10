@@ -1,29 +1,17 @@
+
 java method overriding
-
 java inheritance
-
 static keyword
-
 java object passing
-
 java array of objects
-
 java toString method
-
 java overloaded constructors
-
 java variable scope
-
 java objects OOP
-
 java constructors
-
 java overloaded methods
-
 java methods
-
 java for each loop
-
 java String methods
 java ArrayList
 java 2D ArrayList
@@ -52,3 +40,16 @@ java TimerTask #to run method or thread on a schedule one time or multiple times
 java threads  #runs user thread then Daemon thread true or false
 java multi-threading #thread1.start() thread2.start() thread.setDaemon 
 java packages #import packagename.classname  to create instance/object
+
+===================================================================================================
+
+Data structures and algorithms list
+ 
+Data structures                  #array of list eg
+Algorithms                       #series of steps to solve a problem
+Stack                            #LIFO  - stacking move forward / backward
+Queue data structures            #FIFO - first in first out add-enqueue ,  remove-dequeue
+Priority Queue                   #FIFO - low to highest or reverse -Collections.reverseorder
+LinkedList                       #nodes - easy to replace element in the list, low memory waste
+Dynamic Arrays                   #increase size /capacity of the list
+LinkedListVsArrayList            #Arraylist is faster than Linkedlist 
